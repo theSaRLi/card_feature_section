@@ -14,6 +14,7 @@ body{
     color: var(--grayish-blue);
     font-size: 15px;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 h1,h2{
@@ -27,23 +28,28 @@ header{
 }
 
 .wrapper{
-    margin: 5% 10%;
+    margin: 5% 7%;
     height: 100vh;
 }
 
 .card-grid{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-     ". card-two ."
-     "card-one card-two card-four"
-     "card-one card-three card-four"
-     ". card-three ."
+    display: flex;
+  /* place items in column */
+  flex-direction: column;
+  /* center flex items horizontally */
+  align-items: center;
+  /* center all content vertically */
+  justify-content: center;
 }
 
 .card{
-    border-radius: 5%;
+    position: relative;
+    border-radius: 2%;
+    box-shadow: 0px 22px 54px -29px hsl(229, 6%, 66%);
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    padding-bottom: 80px;
+    max-width: 290px;
 }
 
 .card-1{
@@ -64,4 +70,26 @@ header{
 .card-4{
     border-top: solid var(--blue);
     grid-area: card-four;
+}
+
+.card img{
+    position: absolute;
+    right: 20px;
+}
+
+
+/* Media Query */
+@media(min-width: 769px){
+
+    .card-grid{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+         ". card-two ."
+         "card-one card-two card-four"
+         "card-one card-three card-four"
+         ". card-three ."
+    }
+
 }
