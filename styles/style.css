@@ -1,0 +1,67 @@
+:root{
+    /*primary*/
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /*neutral*/
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+}
+
+body{
+    color: var(--grayish-blue);
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+h1,h2{
+    color: var(--very-dark-blue);
+}
+
+header{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper{
+    margin: 5% 10%;
+    height: 100vh;
+}
+
+.card-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+     ". card-two ."
+     "card-one card-two card-four"
+     "card-one card-three card-four"
+     ". card-three ."
+}
+
+.card{
+    border-radius: 5%;
+}
+
+.card-1{
+    border-top: solid var(--cyan);
+    grid-area: card-one;
+}
+
+.card-2{
+    border-top: solid var(--red);
+    grid-area: card-two;
+}
+
+.card-3{
+    border-top: solid var(--orange);
+    grid-area: card-three;
+}
+
+.card-4{
+    border-top: solid var(--blue);
+    grid-area: card-four;
+}
