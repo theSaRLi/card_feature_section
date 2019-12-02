@@ -15,10 +15,23 @@ body{
     font-size: 15px;
     font-family: sans-serif;
     box-sizing: border-box;
+    margin: 0 7%;
 }
 
 h1,h2{
     color: var(--very-dark-blue);
+}
+
+.sub-heading{
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+.sub-par{
+    max-width: 600px;
+    margin: 30px auto;
+
 }
 
 header{
@@ -27,10 +40,10 @@ header{
     text-align: center;
 }
 
-.wrapper{
+/*.wrapper{
     margin: 5% 7%;
     height: 100vh;
-}
+}*/
 
 .card-grid{
     display: flex;
@@ -47,10 +60,11 @@ header{
     position: relative;
     border-radius: 2%;
     box-shadow: 0px 22px 54px -29px hsl(229, 6%, 66%);
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     padding: 5px 20px;
     padding-bottom: 80px;
     max-width: 290px;
+    justify-self: center;
 }
 
 .card-1{
@@ -80,7 +94,7 @@ header{
 
 
 /* Media Query */
-@media(min-width: 769px){
+@media(min-width: 1400px){
 
     .card-grid{
         display: grid; 
@@ -90,7 +104,8 @@ header{
          ". card-two ."
          "card-one card-two card-four"
          "card-one card-three card-four"
-         ". card-three ."
+         ". card-three ."; 
+         margin-top: 5%;
     }
 
 }
